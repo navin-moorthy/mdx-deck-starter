@@ -1,0 +1,213 @@
+import { comic, prism } from "mdx-deck/themes";
+import { Image, Appear, Invert, Split, FullScreenCode, Notes } from "mdx-deck";
+import Layout from "./Layout.js";
+// example for twitter card Head
+// import { Head } from 'mdx-deck'
+// <Head>
+// <title>mdx-deck</title>
+// <meta name='twitter:card' content='summary_large_image' />
+// <meta name='twitter:site' content='@jxnblk' />
+// <meta name='twitter:title' content='mdx-deck' />
+// <meta name='twitter:description' content='MDX-based presentation decks' />
+// <meta name='twitter:image' content='https://jxnblk.com/mdx-deck/card.png' />
+// </Head>
+
+export const themes = [comic, prism];
+
+# Hello All👋
+
+## Excited🚀 to learn about
+
+### MDX Deck
+
+---
+
+### Getting Started
+
+`npm i -D mdx-deck`
+
+Create an MDX file and separate each slide with ---
+
+---
+
+### Presenting Hints
+
+Go to previous slide (or step in Appear)
+
+Left Arrow, Page Up, Shift + Space
+
+---
+
+### Presenting Hints
+
+Go to next slide (or step in Appear)
+
+Right Arrow, Page Down, Space
+
+---
+
+### Presenting Hints
+
+- Option + P -> Toggle Presenter Mode
+- Option + O -> Toggle Overview Mode
+- Option + G -> Toggle Grid Mode
+
+<Notes>Only visible in presenter mode</Notes>
+
+---
+
+### More presenting docs
+
+[Presenting Doc][]
+
+[presenting doc]: https://github.com/jxnblk/mdx-deck/blob/master/docs/presenting.md
+
+<Notes>Only visible in presenter mode</Notes>
+
+---
+
+### Importing single Built-in Theme
+
+```jsx
+import comic from "mdx-deck";
+export const theme = themes.comic;
+```
+
+---
+
+### Importing multiple Built-in Theme
+
+```jsx
+import { comic, prism } from "mdx-deck/themes";
+export const themes = [comic, prism];
+```
+
+---
+
+### Prism Syntax Highlighting
+
+```jsx
+import React from "react";
+
+export default ({ children }) => {
+  return <>{children}</>;
+};
+```
+
+---
+
+### More theming documentations
+
+[Theming Doc](https://github.com/jxnblk/mdx-deck/blob/master/docs/theming.md)
+
+[Available themes](https://github.com/jxnblk/mdx-deck/blob/master/docs/themes.md)
+
+---
+
+<Image src="https://images.unsplash.com/photo-1566995589099-45de344a6dbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=823&q=80">
+  <Layout>
+    <ul>
+      <li>Full Screen Image Background</li>
+      <Appear>
+        <li>Previous Slide Code with Prism Highlight</li>
+        <li>Current Slide Custom layout</li>
+        <li>Appear content in Steps</li>
+        <li>Next Slide Inverted</li>
+      </Appear>
+    </ul>
+  </Layout>
+</Image>
+
+---
+
+### More Components Documentation
+
+[Components Docs](https://github.com/jxnblk/mdx-deck/blob/master/docs/components.md)
+
+---
+
+<Invert>
+
+# Inverted Layout
+
+## Foreground to Background
+
+</Invert>
+
+---
+
+<Split>
+
+![Tower](https://images.unsplash.com/photo-1544800063-3915ca906390?ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80)
+
+## Split Left Layout
+
+</Split>
+
+---
+
+<SplitRight >
+
+![Tower](https://images.unsplash.com/photo-1544800063-3915ca906390?ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80)
+
+## Split Right Layout
+
+</SplitRight >
+
+---
+
+<Horizontal>
+
+![](https://images.unsplash.com/photo-1544669819-cc1daf7dc87d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)
+
+![](https://images.unsplash.com/photo-1566995166102-534a628aa0f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80)
+
+### Horizontal Layout
+
+</Horizontal>
+
+---
+
+<FullScreenCode>
+
+```jsx
+import React from "react";
+
+export default ({ children }) => (
+  <div
+    style={{
+      width: "100vw",
+      height: "100%"
+    }}
+  >
+    {children}
+  </div>
+);
+```
+
+</FullScreenCode>
+
+---
+
+### More layouts documentation
+
+[Layout Docs](https://github.com/jxnblk/mdx-deck/blob/master/docs/layouts.md)
+
+---
+
+### Other advanced docs
+
+- [Exporting the Deck](https://github.com/jxnblk/mdx-deck/blob/master/docs/exporting.md)
+- [Gatsby Implementation inside the blog](https://github.com/jxnblk/mdx-deck/blob/master/docs/gatsby.md)
+- [Advanced Docs](https://github.com/jxnblk/mdx-deck/blob/master/docs/advanced.md)
+- [API](https://github.com/jxnblk/mdx-deck/blob/master/docs/api.md)
+
+---
+
+### Further reads
+
+- [Kent C Dodds Deck](https://github.com/kentcdodds/simply-react)
+
+---
+
+# The End 🔚
