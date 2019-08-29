@@ -2,16 +2,19 @@ import { comic, prism } from "mdx-deck/themes";
 import { Image, Appear, Invert, Split, FullScreenCode, Notes } from "mdx-deck";
 import Layout from "./Layout.js";
 import Counter from "./Counter";
-// example for twitter card Head
-// import { Head } from 'mdx-deck'
-// <Head>
-// <title>mdx-deck</title>
-// <meta name='twitter:card' content='summary_large_image' />
-// <meta name='twitter:site' content='@jxnblk' />
-// <meta name='twitter:title' content='mdx-deck' />
-// <meta name='twitter:description' content='MDX-based presentation decks' />
-// <meta name='twitter:image' content='https://jxnblk.com/mdx-deck/card.png' />
-// </Head>
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+
+<!-- example for twitter card Head
+import { Head } from 'mdx-deck'
+
+<Head>
+  <title>mdx-deck</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@jxnblk" />
+  <meta name="twitter:title" content="mdx-deck" />
+  <meta name="twitter:description" content="MDX-based presentation decks" />
+  <meta name="twitter:image" content="https://jxnblk.com/mdx-deck/card.png" />
+</Head> -->
 
 export const themes = [comic, prism];
 
@@ -197,6 +200,14 @@ export default ({ children }) => (
 ---
 
 <Counter />
+
+---
+
+<LiveProvider code="<h1>Live Code !!</h1>">
+  <LiveEditor />
+  <LiveError />
+  <LivePreview />
+</LiveProvider>
 
 ---
 
