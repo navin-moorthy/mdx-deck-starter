@@ -11,6 +11,6 @@
   "author": "Navin",
   "license": "ISC",
   "devDependencies": {
-    "mdx-deck": "^3.0.9"
+    "mdx-deck": "3.0.9"
   }
 }
